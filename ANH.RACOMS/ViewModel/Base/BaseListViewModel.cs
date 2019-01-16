@@ -20,7 +20,7 @@ namespace ANH.RACOMS
         public List<BaseListItemViewModel> Items { get; set; }
 
 
-        public List<BaseListItemDataModel> BaseList { get; set; }
+        public List<CompositeDataModel> BaseList { get; set; }
 
         #endregion
 

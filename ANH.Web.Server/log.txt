@@ -1,0 +1,18 @@
+[2019-01-05 03:19:26] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2019-01-05 03:19:27] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2019-01-05 03:23:01] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2019-01-05 03:23:01] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2019-01-05 03:28:58] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2019-01-05 03:28:58] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2019-01-05 03:28:59] Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+[2019-01-05 03:28:59] Failed to authenticate HTTPS connection.
+[2019-01-05 03:28:59] Failed to authenticate HTTPS connection.
+[2019-01-05 03:28:59] Request starting HTTP/1.1 GET https://localhost:5555/  
+[2019-01-05 03:28:59] Route matched with {action = "Index", controller = "Home"}. Executing action ANH.Web.Server.HomeController.Index (ANH.Web.Server)
+[2019-01-05 03:28:59] Executing action method ANH.Web.Server.HomeController.Index (ANH.Web.Server) - Validation state: Valid
+[2019-01-05 03:28:59] Executed action method ANH.Web.Server.HomeController.Index (ANH.Web.Server), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.4609ms.
+[2019-01-05 03:28:59] Executing ViewResult, running view Index.
+[2019-01-05 03:28:59] Executed ViewResult - view Index executed in 63.0979ms.
+[2019-01-05 03:29:00] Executed action ANH.Web.Server.HomeController.Index (ANH.Web.Server) in 88.4561ms
+[2019-01-05 03:29:00] Request finished in 240.2236ms 200 text/html; charset=utf-8

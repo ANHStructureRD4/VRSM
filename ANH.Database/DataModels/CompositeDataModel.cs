@@ -3,7 +3,7 @@
     /// <summary>
     /// A data model for Base list item
     /// </summary>
-    public class BaseListItemDataModel
+    public class CompositeDataModel
     {
         /// <summary>
         /// The display base name
@@ -18,7 +18,7 @@
         /// <summary>
         /// content
         /// </summary>
-        public int Contents { get; set; }
+        public string  Contents { get; set; }
 
         /// <summary>
         /// True if this item is currently selected

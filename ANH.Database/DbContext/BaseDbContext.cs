@@ -6,14 +6,14 @@ namespace ANH.Database
     /// <summary>
     /// The database context for the client data store
     /// </summary>
-    public class BaseListDataDbContext : DbContext
+    public class BaseDbContext : DbContext
     {
         #region DbSets 
 
         /// <summary>
         /// The client login credentials
         /// </summary>
-        public DbSet<BaseListItemDataModel> BaseListItems { get; set; }
+        public DbSet<CompositeDataModel> Composite { get; set; }
 
         #endregion
 
@@ -22,7 +22,7 @@ namespace ANH.Database
         /// <summary>
         /// Default constructor
         /// </summary>
-        public BaseListDataDbContext(DbContextOptions<BaseListDataDbContext> options) : base(options) { }
+        public BaseDbContext(DbContextOptions<BaseDbContext> options) : base(options) { }
 
         #endregion
 
@@ -42,7 +42,8 @@ namespace ANH.Database
             // --------------------------
             //
             // Set Id as primary key
-            modelBuilder.Entity<BaseListItemDataModel>().HasKey(a => a.Name);
+            modelBuilder.Entity<CompositeDataModel>().HasKey(a => a.Name);
+            modelBuilder.Entity<CompositeDataModel>().HasData(new CompositeDataModel() { Name="Composite3", Contents="테스트3", count=1, IconSource="", IsSelected=true });
 
             // Set up limits
             //modelBuilder.Entity<BaseListItemDataModel>().Property(a => a.FirstName).HasMaxLength(50);

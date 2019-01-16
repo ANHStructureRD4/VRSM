@@ -28,7 +28,7 @@ namespace ANH.RACOMS
         /// </summary>
         public BaseListDesignModel()
         {
-            BaseList = BaseListItem.GetBaseListsAsync().Result;
+            BaseList = BaseListItem.GetCompositeListsAsync().Result;
 
             
 

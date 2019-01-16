@@ -11,10 +11,10 @@ namespace ANH.Web.Server
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args)
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             return WebHost.CreateDefaultBuilder()
                 // Add Dna Framework
@@ -25,8 +25,7 @@ namespace ANH.Web.Server
                     // Add file logger
                     constructor.AddFileLogger();
                 })
-                .UseStartup<Startup>()
-                .Build();
+                .UseStartup<Startup>();
         }
     }
 }

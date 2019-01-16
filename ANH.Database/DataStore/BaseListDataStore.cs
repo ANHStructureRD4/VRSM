@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,7 +20,7 @@ namespace ANH.Database
         /// <summary>
         /// The database context for the client data store
         /// </summary>
-        protected BaseListDataDbContext mDbContext;
+        protected BaseDbContext mDbContext;
 
         #endregion
 
@@ -29,7 +30,7 @@ namespace ANH.Database
         /// Default constructor
         /// </summary>
         /// <param name="dbContext">The database to use</param>
-        public BaseListDataStore(BaseListDataDbContext dbContext)
+        public BaseListDataStore(BaseDbContext dbContext)
         {
             // Set local member
             mDbContext = dbContext;
@@ -44,7 +45,7 @@ namespace ANH.Database
         /// </summary>
         public async Task<bool> HasListsAsync()
         {
-            return await GetBaseListsAsync() != null;
+            return await GetCompositeListsAsync() != null;
         }
 
         /// <summary>
@@ -61,16 +62,27 @@ namespace ANH.Database
         /// Gets the stored login credentials for this client
         /// </summary>
         /// <returns>Returns the login credentials if they exist, or null if none exist</returns>
-        public Task<List<BaseListItemDataModel>> GetBaseListsAsync()
+        public Task<List<CompositeDataModel>> GetCompositeListsAsync()
         {
             // Get the first column in the login credentials table, or null if none exist
-            return Task.FromResult(mDbContext.BaseListItems.ToList());
+            //return Task.FromResult(mDbContext.Composite.ToList());
+
+            var param = new[]
+            {
+                new SqlParameter("@Name", "Composite3"),
+                new SqlParameter("@Content", ""),
+            };
+            //var param2 = new SqlParameter("content", "");
+
+            //sqlParameter.Add(param1);
+
+            return Task.FromResult(mDbContext.Composite.FromSql("GetCompositeList @Name, @Content", param).ToList());
         }
 
-        public Task<BaseListItemDataModel> GetBaseListItemsAsync(string name)
+        public Task<CompositeDataModel> GetCompositeListItemsAsync(string name)
         {
             // Get the first column in the login credentials table, or null if none exist
-            return Task.FromResult(mDbContext.BaseListItems.Where(b => b.Name.Contains(name)).FirstOrDefault());
+            return Task.FromResult(mDbContext.Composite.Where(b => b.Name.Contains(name)).FirstOrDefault());
         }
 
         /// <summary>
@@ -78,13 +90,13 @@ namespace ANH.Database
         /// </summary>
         /// <param name="loginCredentials">The login credentials to save</param>
         /// <returns>Returns a task that will finish once the save is complete</returns>
-        public async Task SaveBaseListsAsync(BaseListItemDataModel baseLists)
+        public async Task SaveBaseListsAsync(CompositeDataModel baseLists)
         {
             // Clear all entries
-            mDbContext.BaseListItems.RemoveRange(mDbContext.BaseListItems);
+            mDbContext.Composite.RemoveRange(mDbContext.Composite);
 
             // Add new one
-            mDbContext.BaseListItems.Add(baseLists);
+            mDbContext.Composite.Add(baseLists);
 
             // Save changes
             await mDbContext.SaveChangesAsync();
@@ -97,7 +109,7 @@ namespace ANH.Database
         public async Task ClearAllBaseListsAsync()
         {
             // Clear all entries
-            mDbContext.BaseListItems.RemoveRange(mDbContext.BaseListItems);
+            mDbContext.Composite.RemoveRange(mDbContext.Composite);
 
             // Save changes
             await mDbContext.SaveChangesAsync();

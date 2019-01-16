@@ -27,11 +27,11 @@ namespace ANH.Database
                 //options.UseSqlServer(construction.Configuration.GetConnectionString("MsSqlDataStoreConnection"));
             }, contextLifetime: ServiceLifetime.Transient);
 
-            service.AddDbContext<BaseListDataDbContext>(options =>
+            service.AddDbContext<BaseDbContext>(options =>
             {
                 // Setup connection string
-                options.UseSqlite(construction.Configuration.GetConnectionString("SQLiteDataStoreConnection"));
-                //options.UseSqlServer(construction.Configuration.GetConnectionString("MsSqlDataStoreConnection"));
+                //options.UseSqlite(construction.Configuration.GetConnectionString("SQLiteDataStoreConnection"));
+                options.UseSqlServer(construction.Configuration.GetConnectionString("MsSqlDataStoreConnection"));
             }, contextLifetime: ServiceLifetime.Transient);
 
             // Add client data store for easy access/use of the backing data store
@@ -42,7 +42,7 @@ namespace ANH.Database
             // Add client data store for easy access/use of the backing data store
             // Make it scoped so we can inject the scoped DbContext
             service.AddTransient<IBaseListDataStore>(
-                provider => new BaseListDataStore(provider.GetService<BaseListDataDbContext>()));
+                provider => new BaseListDataStore(provider.GetService<BaseDbContext>()));
 
             // Return framework for chaining
             return construction;

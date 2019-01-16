@@ -156,7 +156,7 @@ namespace ANH.RACOMS
         private async Task UpdateValuesFromLocalStoreAsync(IBaseListDataStore baseListDataStore)
         {
             // Get the stored credentials
-            var storedBaseList = await baseListDataStore.GetBaseListsAsync();
+            var storedBaseList = await baseListDataStore.GetCompositeListsAsync();
 
             //Name = storedBaseList?.Name;
             //count = storedBaseList?.count;
