@@ -1,0 +1,255 @@
+﻿<Window x:Class="ANH.GCS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ANH.GCS"
+        xmlns:core="clr-namespace:ANH.Core;assembly=ANH.Core"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        x:Name="AppWindow"
+        Icon="Images/Logo/COMPOXIT.logo.ico"
+        Deactivated="AppWindow_Deactivated"
+        Activated="AppWindow_Activated"
+        MinWidth="{Binding WindowMinimumWidth}"
+        MinHeight="{Binding WindowMinimumHeight}"
+        Title="Welcome, Master" Height="700" Width="1200">
+    
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <!-- Outer border with the dropshadow margin -->
+                        <Grid>
+                            <Border Padding="{Binding OuterMarginSize, FallbackValue=0}" BorderBrush="{StaticResource ForegroundDarkBrush}" BorderThickness="{Binding FlatBorderThickness}">
+
+                                <!-- Main Window outline -->
+                                <Grid>
+
+
+                                    <!-- Window border and dropshadown -->
+                                    <!--<Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
+                                            Background="{Binding ForegroundLightBrush}">
+                                        <Border.Effect>
+                                            <DropShadowEffect ShadowDepth="0.5" Opacity="0.2"></DropShadowEffect>
+                                        </Border.Effect>
+                                    </Border>-->
+
+                                    <!-- The main window content-->
+                                    <Grid>
+
+                                        <!-- Corner clipping -->
+                                        <!--<Grid.OpacityMask>
+                                            <VisualBrush Visual="{Binding ElementName=Container}"></VisualBrush>
+                                        </Grid.OpacityMask>-->
+
+                                        <Grid.RowDefinitions>
+
+                                            <!-- Title Bar -->
+                                            <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=32}"></RowDefinition>
+                                            <!-- Drop shadow -->
+                                            <!--<RowDefinition Height="Auto"></RowDefinition>-->
+                                            <!-- Window Content -->
+                                            <RowDefinition Height="*"></RowDefinition>
+
+                                        </Grid.RowDefinitions>
+
+                                        <!-- Title Bar -->
+                                        <Grid Panel.ZIndex="1" Background="{StaticResource ForegroundVeryDarkBrush}">
+
+                                            <Grid.ColumnDefinitions>
+                                                <!-- Title -->
+                                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                <!-- Header Menu -->
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <!-- Windows Button -->
+                                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+
+                                            </Grid.ColumnDefinitions>
+
+                                            <!-- Title -->
+                                            <Button Style="{StaticResource SystemIconButton}"
+                                                    Command="{Binding MenuCommand}"
+                                                    Content="RACOMS">
+                                                <!--<Image Source="/Images/Logo/COMPOXIT.logo.png"></Image>-->
+                                            </Button>
+
+                                            <!-- Header Menu -->
+                                            <!--<StackPanel Grid.Column="1" Orientation="Horizontal">
+                                                <Menu Style="{StaticResource WindowMenuButton}">
+                                                    <MenuItem Header="_File" Style="{StaticResource TopLevelMenuItemButton}">
+                                                        <MenuItem Header="_Open" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Close" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Save" Style="{StaticResource WindowMenuItemButton}"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="_Edit" Style="{StaticResource TopLevelMenuItemButton}">
+                                                        <MenuItem Header="_undo" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Close" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Save" Style="{StaticResource WindowMenuItemButton}"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="_Data" Style="{StaticResource TopLevelMenuItemButton}">
+                                                        <MenuItem Header="_Open" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Close" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Save" Style="{StaticResource WindowMenuItemButton}"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="_Analysis" Style="{StaticResource TopLevelMenuItemButton}">
+                                                        <MenuItem Header="_Open" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Close" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Save" Style="{StaticResource WindowMenuItemButton}"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="_Window" Style="{StaticResource TopLevelMenuItemButton}">
+                                                        <MenuItem Header="_Open" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Close" Style="{StaticResource WindowMenuItemButton}"/>
+                                                        <MenuItem Header="_Save" Style="{StaticResource WindowMenuItemButton}"/>
+                                                    </MenuItem>
+                                                    <MenuItem Header="_Help" Style="{StaticResource TopLevelMenuItemButton}">
+                                                    </MenuItem>
+                                                </Menu>
+                                            </StackPanel>-->
+
+                                            <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="5">
+                                                <!--<TextBlock FontFamily="{StaticResource LatoBold}" FontSize="{StaticResource FontSizeLarge}" Margin="0,0,0,-5">
+                                                    <Run Text="C" Foreground="{StaticResource WordOrangeBrush}"></Run>
+                                                    <Run Text="o" Foreground="{StaticResource WordBlueBrush}"></Run>
+                                                    <Run Text="m" Foreground="{StaticResource WordRedBrush}"></Run>
+                                                    <Run Text="p" Foreground="{StaticResource WordGreenBrush}"></Run>
+                                                    <Run Text="o" Foreground="{StaticResource WordOrangeBrush}"></Run>
+                                                    <Run Text="X" Foreground="{StaticResource WordBlueBrush}"></Run>
+                                                    <Run Text="i" Foreground="{StaticResource WordRedBrush}"></Run>
+                                                    <Run Text="t" Foreground="{StaticResource WordGreenBrush}"></Run>
+                                                </TextBlock>-->
+                                                    
+                                            <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Welcome, Compositus'}"></TextBlock>
+                                            
+                                            </Viewbox>
+
+
+
+                                            <!-- Window Buttons -->
+                                            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                                <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}" Content="­―­"></Button>
+                                                <Button Command="{Binding MaximizeCommand}" Style="{StaticResource WindowControlButton}" Content="□"></Button>
+                                                <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowCloseButton}" Content="X"></Button>
+                                            </StackPanel>
+
+                                        </Grid>
+
+                                        <!-- Drop Shadow -->
+                                        <!--<Border Grid.Row="1" Height="3" BorderThickness="0 0.2 0 0">
+                                            -->
+                                        <!--Underling-->
+                                        <!--
+                                            <Border.BorderBrush>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="1, 0">
+                                                    <GradientStop Color="{StaticResource ForegroundLight}" Offset="0.0"></GradientStop>
+                                                    <GradientStop Color="{StaticResource ForegroundMain}" Offset="0.5"></GradientStop>
+                                                    <GradientStop Color="{StaticResource ForegroundLight}" Offset="1.0"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Border.BorderBrush>
+                                        
+                                            -->
+                                        <!-- shadow-->
+                                        <!--
+                                            <Border.Background>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="0, 1">
+                                                    <GradientStop Color="{StaticResource BackgroundVeryLight}" Offset="0.0"></GradientStop>
+                                                    <GradientStop Color="{StaticResource ForegroundLight}" Offset="1.0"></GradientStop>
+                                                </LinearGradientBrush>
+                                            </Border.Background>
+                                        
+                                        </Border>-->
+
+                                        <!--<Border Grid.Row="1">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Menu>
+                                                    <MenuItem Header="_File">
+                                                        <MenuItem Header="_Open"/>
+                                                        <MenuItem Header="_Close"/>
+                                                        <MenuItem Header="_Save"/>
+                                                    </MenuItem>
+                                                </Menu>
+                                            </StackPanel>
+                                        </Border>-->
+
+                                        <!-- Page Content -->
+                                        <Border Grid.Row="1" Padding="{Binding InnerContentPadding}" ClipToBounds="True">
+                                            <!--Background="{StaticResource WordBlueBrush}"-->
+                                            <Border>
+                                                <!--<Border.Background>
+                                                    <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 400 300" ImageSource="/Images/Backgrounds/anh-background.png"></ImageBrush>
+                                                </Border.Background>-->
+                                                <ContentPresenter Content="{TemplateBinding Content}"></ContentPresenter>
+                                            </Border>
+                                        </Border>
+
+                                    </Grid>
+
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"                      
+            CaptionHeight="{Binding TitleHeight}"
+            CornerRadius="0"
+            GlassFrameThickness="0">
+        </WindowChrome>
+    </WindowChrome.WindowChrome>
+
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Background image -->
+        <!--<Grid.Background>
+            <ImageBrush Stretch="None" ImageSource="/Images/Backgrounds/COMPOXIT.bground.optical.png"/>
+        </Grid.Background>-->
+
+        <!-- Dimmed overlay-->
+        <Border Grid.ColumnSpan="4"
+                Panel.ZIndex="10"
+                Opacity="0.3">
+            <Border Background="{StaticResource ForegroundVeryDarkBrush}"
+                    local:AnimateFadeInProperty.Value="{Binding DimmableOverlayVisible}" />
+        </Border>
+
+        <Border Grid.Column="0"
+                Background="{StaticResource BackgroundDarkBrush}" />
+
+        <Border Grid.Column="1"
+                Background="{StaticResource BorderShadowDarkBrush}"
+                Opacity="0.9">
+        </Border>
+
+        <Border Grid.Column="2"
+                Background="{StaticResource BackgroundDarkBrush}" />
+
+        <Border Grid.Column="3"
+                Background="{StaticResource BackgroundDarkBrush}" />
+
+        <local:SideMenuControl Grid.Column="0" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <local:BaseListControl Panel.ZIndex="0" Grid.Column="1"
+                                       DataContext="{x:Static local:BaseListDesignModel.Instance }"                                       />
+            </StackPanel>
+        </local:SideMenuControl>
+
+    </Grid>
+
+</Window>
