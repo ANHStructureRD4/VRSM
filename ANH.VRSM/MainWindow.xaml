@@ -74,7 +74,7 @@
                                             <!-- Title -->
                                             <Button Style="{StaticResource SystemIconButton}"
                                                     Command="{Binding MenuCommand}"
-                                                    Content="RACOMS">
+                                                    Content="DPSM">
                                                 <!--<Image Source="/Images/Logo/COMPOXIT.logo.png"></Image>-->
                                             </Button>
 
@@ -246,7 +246,7 @@
         <local:SideMenuControl Grid.Column="0" HorizontalAlignment="Left">
             <StackPanel Orientation="Horizontal">
                 <local:BaseListControl Panel.ZIndex="0" Grid.Column="1"
-                                       DataContext="{x:Static local:BaseListDesignModel.Instance }"                                       />
+                                       DataContext="{x:Static local:BaseListDesignModel.Instance }" />
             </StackPanel>
         </local:SideMenuControl>
 

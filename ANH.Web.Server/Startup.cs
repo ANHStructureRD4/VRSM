@@ -184,7 +184,7 @@ namespace ANH.Web.Server
             });
 
             // Make sure we have the database
-            serviceProvider.GetService<ApplicationDbContext>().Database.EnsureCreated();
+            //serviceProvider.GetService<ApplicationDbContext>().Database.EnsureCreated();
         }
     }
 }

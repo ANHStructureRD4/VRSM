@@ -38,5 +38,10 @@ namespace ANH.RACOMS
         /// A shortcut to access toe <see cref="IBaseListDataStore"/> service
         /// </summary>
         public static IBaseListDataStore BaseListItem => Framework.Service<IBaseListDataStore>();
+
+        /// <summary>
+        /// A shortcut to access toe <see cref="IMaterialListDataStore"/> service
+        /// </summary>
+        public static IMaterialListDataStore MaterialListItem => Framework.Service<IMaterialListDataStore>();
     }
 }

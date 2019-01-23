@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0015EE2A-44D0-4E12-AE57-145B2E7C3B9C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ANH.RACOMS</RootNamespace>
-    <AssemblyName>ANH.RACOMS</AssemblyName>
+    <RootNamespace>ANH.VRSM</RootNamespace>
+    <AssemblyName>ANH.VRSM</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
