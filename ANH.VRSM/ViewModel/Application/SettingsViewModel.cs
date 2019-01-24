@@ -4,10 +4,10 @@ using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 using static Dna.FrameworkDI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// The settings state as a view model

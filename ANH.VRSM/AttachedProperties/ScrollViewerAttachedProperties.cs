@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// Scroll an items control to the bottom when the data context changes

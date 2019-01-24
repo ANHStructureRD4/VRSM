@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// Interaction logic for DialogMessageBox.xaml

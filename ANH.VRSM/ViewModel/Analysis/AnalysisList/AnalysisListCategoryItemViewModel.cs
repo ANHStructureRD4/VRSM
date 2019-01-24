@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A view model for each analysis list item in the overview analysis list

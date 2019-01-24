@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// Interaction logic for DialogWindow.xaml

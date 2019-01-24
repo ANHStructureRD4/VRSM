@@ -1,7 +1,7 @@
 ﻿using ANH.Core;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// Locates view models from the IoC for use in binding in Xaml files

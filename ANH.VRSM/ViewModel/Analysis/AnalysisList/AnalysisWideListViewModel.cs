@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Input;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A view model for the overview analysis Wide list

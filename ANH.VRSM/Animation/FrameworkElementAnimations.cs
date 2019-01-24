@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using static ANH.Core.CoreDI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// Helpers to animate framework elements in specific ways

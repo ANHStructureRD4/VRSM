@@ -1,6 +1,6 @@
 ﻿using System.Security;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// An interface for a class that can provide a secure password

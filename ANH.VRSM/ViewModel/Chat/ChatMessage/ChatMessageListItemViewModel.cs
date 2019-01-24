@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A view model for each chat message thread item in a chat thread

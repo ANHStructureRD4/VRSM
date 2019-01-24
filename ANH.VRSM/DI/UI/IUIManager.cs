@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// The UI manager that handles any UI interaction in the application

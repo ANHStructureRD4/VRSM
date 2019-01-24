@@ -1,9 +1,9 @@
 ﻿using ANH.Core;
 using System;
 using System.Windows.Input;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     ///  The Settings state as a view model

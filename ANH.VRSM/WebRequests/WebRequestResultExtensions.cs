@@ -1,9 +1,9 @@
 ﻿using ANH.Core;
 using Dna;
 using System.Threading.Tasks;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// Extension methods for the <see cref="WebRequestResultExtensions"/> class

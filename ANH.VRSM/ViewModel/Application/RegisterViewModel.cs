@@ -2,9 +2,9 @@
 using System.Security;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// The View Model for a login screen

@@ -1,10 +1,10 @@
 ﻿using ANH.Core;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 using static ANH.Core.CoreDI;
 using System.Windows.Input;
 using System.Threading.Tasks;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     ///  The application state as a view model

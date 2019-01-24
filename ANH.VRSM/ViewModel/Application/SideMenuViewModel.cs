@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     ///  The Sidemenu state as a view model

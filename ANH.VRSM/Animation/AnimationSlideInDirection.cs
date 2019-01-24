@@ -1,4 +1,4 @@
-﻿namespace ANH.RACOMS
+﻿namespace ANH.VRSM
 {
 	/// <summary>
 	/// The direction an animation silides in (the slide out direction is reversed)

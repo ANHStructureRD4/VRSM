@@ -2,7 +2,7 @@
 using ANH.Core;
 using ANH.Database;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A shorthand access class to get DI services with nice clean short code

@@ -1,4 +1,4 @@
-﻿namespace ANH.RACOMS
+﻿namespace ANH.VRSM
 {
     /// <summary>
     /// Style of page animations for apprearing/disappearing

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A view model for any popup menus

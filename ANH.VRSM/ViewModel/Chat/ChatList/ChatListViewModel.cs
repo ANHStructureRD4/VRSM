@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A view model for the overview chat list

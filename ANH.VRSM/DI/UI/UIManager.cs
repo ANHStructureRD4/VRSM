@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using ANH.Core;
 using System.Windows;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// The applications implementation of the <see cref="IUIManager"/>

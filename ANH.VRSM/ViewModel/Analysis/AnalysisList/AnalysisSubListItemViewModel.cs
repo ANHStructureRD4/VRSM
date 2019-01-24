@@ -1,9 +1,9 @@
 ﻿using ANH.Core;
 using System.Collections.Generic;
 using System.Windows.Input;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A view model for each analysis list item in the overview analysis list

@@ -2,7 +2,7 @@
 using ANH.Core;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// Extension methods for the <see cref="FrameworkConstruction"/>

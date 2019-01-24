@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A Converter that takes in a boolean and inverts it

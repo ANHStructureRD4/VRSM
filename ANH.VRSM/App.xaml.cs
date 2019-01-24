@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using static Dna.FrameworkDI;
 using static ANH.Core.CoreDI;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// App.xaml에 대한 상호 작용 논리

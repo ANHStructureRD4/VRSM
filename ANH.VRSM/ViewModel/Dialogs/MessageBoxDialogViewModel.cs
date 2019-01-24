@@ -1,4 +1,4 @@
-﻿namespace ANH.RACOMS
+﻿namespace ANH.VRSM
 {
     /// <summary>
     /// Details for a message box dialog

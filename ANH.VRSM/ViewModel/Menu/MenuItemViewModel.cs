@@ -1,6 +1,6 @@
 ﻿using ANH.Core;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A view model for a menu item

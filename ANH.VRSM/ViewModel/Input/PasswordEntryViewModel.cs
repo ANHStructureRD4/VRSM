@@ -2,9 +2,9 @@
 using System.Security;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using static ANH.RACOMS.DI;
+using static ANH.VRSM.DI;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// The view model for a password entry to edit a password 

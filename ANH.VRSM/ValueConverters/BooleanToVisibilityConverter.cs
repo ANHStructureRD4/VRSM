@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows;
 
-namespace ANH.RACOMS
+namespace ANH.VRSM
 {
     /// <summary>
     /// A Converter that takes in a boolean and returns a <see cref="Visibility"/>
