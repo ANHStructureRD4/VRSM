@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="ANH.VRSM.LoginPageContentControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ANH.VRSM"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="450">
+    
+    <UserControl.Resources>
+        <Style x:Key="ContentStyle" TargetType="{x:Type ContentControl}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContentControl}">
+
+                        <StackPanel x:Name="container" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.TextAlignment="Center">
+
+                            <!-- Expand detail Icon -->
+                            <Border Background="{StaticResource ForegroundLightBrush}" Width="450" Padding="0" CornerRadius="0">
+
+                                <StackPanel>
+                                    <!-- Login Title -->
+                                    <TextBlock Text="Log In" FontSize="{StaticResource FontSizeXLarge}" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource WordDarkBlueBrush}" />
+                                
+                                    <!-- Login subtitle -->
+                                    <TextBlock Text="" FontSize="{StaticResource FontSizeXLarge}" FontFamily="{StaticResource LatoBold}" Foreground="{StaticResource WordDarkBlueBrush}" />
+                                    
+                                    <!-- Email -->
+                                    <TextBox Tag="Email" />
+                                    
+                                    <!-- Password -->
+                                    <PasswordBox Tag="Password" />
+                                    
+                                    <!-- Login button -->
+                                    <Button Content="Login" HorizontalAlignment="Center"/>
+                                    
+                                    <!-- Go to sign up page button -->
+                                    <Button Style="{StaticResource TextButton}" Content="Create an account" />
+
+
+                                </StackPanel>
+
+                            </Border>
+
+                        </StackPanel>
+
+                        <!-- Hover effect -->
+                        <!--<ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter Property="Background" TargetName="container" Value="{StaticResource WordBlueBrush}" />
+                            </DataTrigger>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="{StaticResource ForegroundLight}" Duration="0:0:0.3" Storyboard.TargetName="analysiscontent" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"></ColorAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation To="{StaticResource ForegroundDark}" Duration="0:0:0.3" Storyboard.TargetName="analysiscontent" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"></ColorAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="container" Value="{StaticResource ForegroundDarkBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>-->
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+    </UserControl.Resources>
+
+    <ContentControl d:DataContext="{x:Static local:BaseListItemDesignModel.Instance}" Style="{StaticResource ContentStyle}"></ContentControl>
+</UserControl>

@@ -24,7 +24,7 @@ namespace ANH.VRSM
         /// </summary>
         public BaseListItemDesignModel()
         {
-            Name = "Analysis Data";
+            Name = "Analysis Data3";
             Contents = AnalysisContent.Unit;
             IsSelected = true;
         }

@@ -43,5 +43,10 @@ namespace ANH.VRSM
         /// A shortcut to access toe <see cref="IMaterialListDataStore"/> service
         /// </summary>
         public static IMaterialListDataStore MaterialListItem => Framework.Service<IMaterialListDataStore>();
+
+        /// <summary>
+        /// A shortcut to access toe <see cref="ISignUpDataStore"/> service
+        /// </summary>
+        public static ISignUpPageDataStore SignUpPageItem => Framework.Service<ISignUpPageDataStore>();
     }
 }

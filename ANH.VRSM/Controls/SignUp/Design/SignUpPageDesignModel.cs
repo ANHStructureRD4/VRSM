@@ -8,16 +8,16 @@ using static ANH.VRSM.DI;
 namespace ANH.VRSM
 {
     /// <summary>
-    /// The design-time data for a <see cref="BaseListViewModel"/>
+    /// The design-time data for a <see cref="SignUpPageViewModel"/>
     /// </summary>
-    public class BaseListDesignModel : BaseListViewModel
+    public class SignUpPageDesignModel : SignUpPageViewModel
     {
         #region Singleton
 
         /// <summary>
         /// A single instance of the design model
         /// </summary>
-        public static BaseListDesignModel Instance => new BaseListDesignModel();
+        public static SignUpPageDesignModel Instance => new SignUpPageDesignModel();
 
         #endregion
 
@@ -26,9 +26,9 @@ namespace ANH.VRSM
         /// <summary>
         /// Default constructor
         /// </summary>
-        public BaseListDesignModel()
+        public SignUpPageDesignModel()
         {
-            BaseList = BaseListItem.GetCompositeListsAsync().Result;
+            SignUpPage = SignUpPageItem.GetCompositeListsAsync().Result;
 
             //Items = new List<BaseListItemViewModel>
             //{

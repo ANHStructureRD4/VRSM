@@ -218,11 +218,27 @@
     <Compile Include="Controls\Input\TextNumericControl.xaml.cs">
       <DependentUpon>TextNumericControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SignUp\SignUpPageItemViewModel.cs" />
+    <Compile Include="Controls\SignUp\SignUpPageContentControl.xaml.cs">
+      <DependentUpon>SignUpPageContentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SignUp\SignUpPageControl.xaml.cs">
+      <DependentUpon>SignUpPageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Login\LoginPageContentControl.xaml.cs">
+      <DependentUpon>LoginPageContentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Login\LoginPageControl.xaml.cs">
+      <DependentUpon>LoginPageControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\List\BaseListControl.xaml.cs">
       <DependentUpon>BaseListControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\List\BaseListItemControl.xaml.cs">
       <DependentUpon>BaseListItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CenterPageControl.xaml.cs">
+      <DependentUpon>CenterPageControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\SideMenuControl.xaml.cs">
       <DependentUpon>SideMenuControl.xaml</DependentUpon>
@@ -253,8 +269,10 @@
     <Compile Include="ViewModel\Analysis\AnalysisList\AnalysisWideListViewModel.cs" />
     <Compile Include="ViewModel\Analysis\AnalysisList\Design\AnalysisListDesignModel.cs" />
     <Compile Include="ViewModel\Analysis\AnalysisList\Design\AnalysisListItemDesignModel.cs" />
+    <Compile Include="Controls\SignUp\SignUpPageViewModel.cs" />
     <Compile Include="ViewModel\Base\BaseListViewModel.cs" />
     <Compile Include="ViewModel\Base\BaseListItemViewModel.cs" />
+    <Compile Include="Controls\SignUp\Design\SignUpPageDesignModel.cs" />
     <Compile Include="ViewModel\Base\Design\BaseListItemDesignModel.cs" />
     <Compile Include="ViewModel\Base\Design\BaseListDesignModel.cs" />
     <Compile Include="ViewModel\Analysis\AnalysisList\Design\AnalysisSubListDesignModel.cs" />
@@ -321,6 +339,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\SignUp\SignUpPageContentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SignUp\SignUpPageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Login\LoginPageContentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Login\LoginPageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\List\BaseListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -328,6 +362,10 @@
     <Page Include="Controls\List\BaseListItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CenterPageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\SideMenuControl.xaml">
       <SubType>Designer</SubType>

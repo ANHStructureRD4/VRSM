@@ -74,7 +74,7 @@
                                             <!-- Title -->
                                             <Button Style="{StaticResource SystemIconButton}"
                                                     Command="{Binding MenuCommand}"
-                                                    Content="DPSM">
+                                                    Content="VRSM">
                                                 <!--<Image Source="/Images/Logo/COMPOXIT.logo.png"></Image>-->
                                             </Button>
 
@@ -123,11 +123,10 @@
                                                     <Run Text="t" Foreground="{StaticResource WordGreenBrush}"></Run>
                                                 </TextBlock>-->
                                                     
-                                            <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Welcome, Compositus'}"></TextBlock>
+                                            <TextBlock Style="{StaticResource HeaderText}" Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, 
+                                                            FallbackValue='CPT Simulator'}"></TextBlock>
                                             
                                             </Viewbox>
-
-
 
                                             <!-- Window Buttons -->
                                             <StackPanel Grid.Column="2" Orientation="Horizontal">
@@ -199,56 +198,39 @@
 
     <WindowChrome.WindowChrome>
         <WindowChrome 
-            ResizeBorderThickness="{Binding ResizeBorderThickness}"                      
-            CaptionHeight="{Binding TitleHeight}"
-            CornerRadius="0"
-            GlassFrameThickness="0">
+            ResizeBorderThickness="{Binding ResizeBorderThickness}" CaptionHeight="{Binding TitleHeight}" CornerRadius="0" GlassFrameThickness="0">
         </WindowChrome>
     </WindowChrome.WindowChrome>
 
 
     <Grid>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-
-        <!-- Background image -->
-        <!--<Grid.Background>
-            <ImageBrush Stretch="None" ImageSource="/Images/Backgrounds/COMPOXIT.bground.optical.png"/>
-        </Grid.Background>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
         <!-- Dimmed overlay-->
-        <Border Grid.ColumnSpan="4"
+        <Border Grid.RowSpan="2"
                 Panel.ZIndex="10"
                 Opacity="0.3">
             <Border Background="{StaticResource ForegroundVeryDarkBrush}"
                     local:AnimateFadeInProperty.Value="{Binding DimmableOverlayVisible}" />
         </Border>
 
-        <Border Grid.Column="0"
+        <Border Grid.Row="0"
                 Background="{StaticResource BackgroundDarkBrush}" />
 
-        <Border Grid.Column="1"
+        <Border Grid.Row="1"
                 Background="{StaticResource BorderShadowDarkBrush}"
                 Opacity="0.9">
         </Border>
 
-        <Border Grid.Column="2"
-                Background="{StaticResource BackgroundDarkBrush}" />
-
-        <Border Grid.Column="3"
-                Background="{StaticResource BackgroundDarkBrush}" />
-
-        <local:SideMenuControl Grid.Column="0" HorizontalAlignment="Left">
-            <StackPanel Orientation="Horizontal">
-                <local:BaseListControl Panel.ZIndex="0" Grid.Column="1"
-                                       DataContext="{x:Static local:BaseListDesignModel.Instance }" />
+        <local:CenterPageControl Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel >
+                <local:SignUpPageControl Panel.ZIndex="0" Grid.Column="1" DataContext="{x:Static local:BaseListDesignModel.Instance }" />
             </StackPanel>
-        </local:SideMenuControl>
+        </local:CenterPageControl>
 
     </Grid>
 
